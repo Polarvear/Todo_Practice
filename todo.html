@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Todo-list</title>
 </head>
 <body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
+    .panel {
+
+        width: 100vw;
+        height: 50vh;
+        background-color: hotpink;
+    }
+
+    .menuDiv {
+        position: absolute;
+        top:0;
+        z-index: 100;
+    }
+
+
+</style>
+<div class="menuDiv">
+    <a href="#addPanel">ADD</a>
+    <a href="#listPanel">LIST</a>
+    <a href="#readPanel">READ</a>
+</div>
+
+<div class="panel" id="addPanel">
+    <h1>ADD</h1>
+</div>
+<div class="panel" id="listPanel">
+    <h1>LIST</h1>
+</div>
+<div class="panel" id="readPanel">
+    <h1>READ</h1>
+</div>
 </body>
 </html>
