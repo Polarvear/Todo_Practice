@@ -33,13 +33,52 @@
 </div>
 
 <div class="panel" id="addPanel">
+    <h1>&nbsp</h1>
     <h1>ADD</h1>
+    <div>
+        <label>제목</label>
+        <input type="text" name="title" size="50" value="새로운 할일">
+    </div>
+    <div>
+        <label>내용</label>
+        <textarea name="content" cols="60" rows="5">할 일의 내용은....</textarea>
+    </div>
+    <div>
+        <label>날짜</label>
+        <input type="date" name="dueDate" size="50" value="2021-12-16">
+    </div>
+    <div>
+        <label>저장</label>
+        <button type="button" id="save-btn">저장하기</button>
+    </div>
 </div>
 <div class="panel" id="listPanel">
     <h1>LIST</h1>
+    <table>
+        <thead>
+        <td>전체선택</td>
+        <td>번호</td>
+        <td>제목</td>
+        <td>날짜</td>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 </div>
 <div class="panel" id="readPanel">
     <h1>READ</h1>
 </div>
+
+<script>
+    const saveBtn = document.querySelector('#save-btn')
+    saveBtn.addEventListener('click', (e) => {
+        `<tr>
+            <td>완료체크'checked':''}></td>
+            <td>idx</td>
+            <td>제목</td>
+            <td>날짜</td>
+         </tr>`
+    },false)
+</script>
 </body>
 </html>
