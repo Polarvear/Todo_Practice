@@ -70,14 +70,21 @@
 </div>
 
 <script>
+    const arr = [1,2,3,4]
+
+
     const saveBtn = document.querySelector('#save-btn')
     saveBtn.addEventListener('click', (e) => {
-        `<tr>
+    const tbodyEle = document.createElement('tbody')
+        for (const result of arr) {
+            tbodyEle.innerHTML =  `<tr>
             <td>완료체크'checked':''}></td>
             <td>idx</td>
             <td>제목</td>
             <td>날짜</td>
          </tr>`
+            console.log(result)
+        }
     },false)
 </script>
 </body>
