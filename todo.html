@@ -26,6 +26,25 @@
 
 
 </style>
+<style>
+    table {
+        border: 1px dashed black;
+    }
+
+    table td:first-child {
+        width: 10vw;
+    }
+    table td:nth-child(2) {
+        width: 10vw;
+    }
+    table td:nth-child(3) {
+        width: 60vw;
+    }
+    table td:nth-child(4) {
+        width: 20vw;
+    }
+
+</style>
 <div class="menuDiv">
     <a href="#addPanel">ADD</a>
     <a href="#listPanel">LIST</a>
@@ -53,6 +72,7 @@
     </div>
 </div>
 <div class="panel" id="listPanel">
+
     <h1>LIST</h1>
     <table>
         <thead>
@@ -75,17 +95,23 @@
 
     const saveBtn = document.querySelector('#save-btn')
     saveBtn.addEventListener('click', (e) => {
-    const tbodyEle = document.createElement('tbody')
+    const tbodyEle = document.querySelector('tbody')
+    let str = ''
+
         for (const result of arr) {
-            tbodyEle.innerHTML =  `<tr>
-            <td>완료체크'checked':''}></td>
+            str += `<tr>
+            <td>완료체크</td>
             <td>idx</td>
             <td>제목</td>
             <td>날짜</td>
          </tr>`
-            console.log(result)
+
         }
+        console.log(str)
+        tbodyEle.innerHTML = str
     },false)
+
+
 </script>
 </body>
 </html>
