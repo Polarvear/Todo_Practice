@@ -92,6 +92,19 @@
 <script>
     const arr = [1,2,3,4]
 
+    const titleEle = document.querySelector("input[name='title']")
+    const contentEle = document.querySelector("textarea[name='content']")
+    const dueDateEle = document.querySelector("input[name='dueDate']")
+    console.log(titleEle, contentEle, dueDateEle)
+
+    const title = titleEle.value
+    const content = contentEle.value
+    const dueDate = dueDateEle.value
+
+    console.log(title, content, dueDate)
+
+
+
 
     const saveBtn = document.querySelector('#save-btn')
     saveBtn.addEventListener('click', (e) => {
@@ -102,7 +115,7 @@
             str += `<tr>
             <td>완료체크</td>
             <td>idx</td>
-            <td>제목</td>
+            <td>제목<button>DEl</button></td>
             <td>날짜</td>
          </tr>`
 
